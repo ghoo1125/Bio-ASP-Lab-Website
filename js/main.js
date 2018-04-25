@@ -3,7 +3,7 @@ function main() {
 
 (function () {
    'use strict';
-   
+
   	$('a.page-scroll').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
           var target = $(this.hash);
@@ -22,12 +22,12 @@ $('#nav').affix({
       offset: {
         top: $('header').height()
       }
-});	
+});
 
-	
-  	// Portfolio isotope filter
+
+    // Publications isotope filter
     $(window).load(function() {
-        var $container = $('.portfolio-items');
+        var $container = $('.publication-items');
         $container.isotope({
             filter: '*',
             animationOptions: {
@@ -52,14 +52,14 @@ $('#nav').affix({
         });
 
     });
-	
 
-    // Nivo Lightbox 
-    $('.portfolio-item a').nivoLightbox({
-            effect: 'slideDown',  
-            keyboardNav: true,                            
+
+    // Nivo Lightbox
+    $('.publication-item a').nivoLightbox({
+            effect: 'slideDown',
+            keyboardNav: true,
         });
- 
+
 
 }());
 
