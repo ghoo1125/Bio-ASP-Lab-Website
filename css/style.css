@@ -180,20 +180,40 @@ header .intro-text {
 #about {
 	padding: 120px 0;
 }
+#about .section-title {
+  padding: 0;
+}
 #about .about-text {
 	margin-left: 10px;
 	text-align: center;
+  padding: 0 0 60px 0;
 }
 #about img {
 	border-radius: 50%;
 	width: 160px;
 	height: 160px;
 	display: inline-block;
+  margin: 0 0 15px 0;
 }
 #about p {
 	margin-top: 40px;
 	margin-bottom: 30px;
 	line-height: 22px;
+}
+.people-col {
+  width: 25%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+  text-align: center;
+  float: left;
+}
+.people-name {
+  font-size: 14pt;
+}
+.people-topic {
+  font-style: italic;
+  color: #1a237e;
 }
 /* Publications Section */
 #publication {
