@@ -215,6 +215,40 @@ header .intro-text {
   font-style: italic;
   color: #1a237e;
 }
+.slideshow {
+  position: relative;
+  padding: 0 30px;
+  height: 500px;
+}
+.people-slide {
+  animation: animateleft 1s;
+}
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity:1;
+  }
+}
+.display-left {
+  position: absolute;
+  left: 0%;
+  top: 70%;
+}
+.display-right {
+  position: absolute;
+  right: 0%;
+  top: 70%;
+}
+.button-grey {
+  color: #aaa;
+  background-color: Transparent;
+  border: none;
+  outline: none;
+}
 /* Publications Section */
 #publication {
 	padding: 120px 0;
