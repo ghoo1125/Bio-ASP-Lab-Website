@@ -381,6 +381,9 @@ ol.type li a:hover {
 #contact {
 	padding: 120px 0 60px 0;
 }
+#contact .section-title {
+  padding: 0;
+}
 #contact h3 {
 	padding-top: 20px;
 	font-size: 20px;
@@ -422,6 +425,12 @@ label {
 	outline: 0;
 	-webkit-box-shadow: transparent;
 	box-shadow: transparent;
+}
+#contact .info {
+  padding: 10px 0px;
+}
+#contact .info>span {
+  padding: 0 5px;
 }
 .form-control::-webkit-input-placeholder {
 color: #2c3e50;
