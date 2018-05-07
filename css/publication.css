@@ -1,0 +1,66 @@
+a {
+  text-decoration: none;
+}
+
+h3 {
+  display: block;
+}
+
+hr {
+  width: 80%;
+}
+
+.list {
+  display: block;
+  padding: 15px 0;
+}
+
+.category {
+  width: 33%;
+  float: left;
+  text-align: center;
+  line-height: 48px;
+  font-size: 24px;
+}
+
+.year-title {
+  line-height: 1.5;
+  font-size: 20pt;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* paper */
+.paper {
+  line-height: 2;
+  font-size: 14pt;
+  overflow: auto;
+}
+
+.paper-title {
+  font-weight: bold;
+}
+
+.paper-conference {
+  font-style: italic;
+}
+
+.paper-img {
+  float: right;
+  max-height: 150px;
+  max-width: 150px;
+  height: auto;
+  margin-right: 10%;
+}
+
+.col {
+  float: left;
+}
+
+.col.s1 {
+  width: 35%;
+}
+
+.col.s2 {
+  width: 50%;
+}
