@@ -842,33 +842,16 @@ function buildPapers() {
     // build year titles from FIRST_YEAR to CURRENT_YEAR
     let yearTitles = buildYear(container);
 
-    // extract papers
-    let imgs = [];
-    let files = [];
-    let years = [];
-    let names = [];
-    let authors = [];
-    let conferences = [];
-    for (let p of arr) {
-      imgs.push(p["imgPath"]);
-      files.push(p["filePath"]);
-      years.push(p["year"]);
-      names.push(p["name"]);
-      authors.push(p["author"]);
-      conferences.push(p["conference"]);
-    }
-
     // build papers block
-    for (let i in papers) {
-
-      if (years[i] < FIRST_YEAR) {
+    for (let j in arr) {
+      if (arr[j]["year"] < FIRST_YEAR) {
         // the paper is too old...
         continue;
       }
 
       let paper = document.createElement("div");
       paper.className = "row paper";
-      yearTitles[years[i] - FIRST_YEAR].appendChild(paper);
+      yearTitles[arr[j]["year"] - FIRST_YEAR].appendChild(paper);
 
       let s1 = document.createElement("div");
       s1.className = "col s1";
@@ -876,7 +859,7 @@ function buildPapers() {
 
       let imgPath = document.createElement("img");
       imgPath.className = "paper-img";
-      imgPath.src = imgs[i];
+      imgPath.src = arr[j]["imgPath"];
       s1.appendChild(imgPath);
 
       let s2 = document.createElement("div");
@@ -888,9 +871,9 @@ function buildPapers() {
       s2.appendChild(paperTitle);
 
       let fileName = document.createElement("a");
-      fileName.href = files[i];
+      fileName.href = arr[j]["filePath"];
       fileName.target = "_blank";
-      fileName.innerHTML = names[i]
+      fileName.innerHTML = arr[j]["name"];
       paperTitle.appendChild(fileName);
 
       let newline = document.createElement("br");
@@ -898,7 +881,7 @@ function buildPapers() {
 
       let author = document.createElement("span");
       author.className = "paper-author";
-      author.innerHTML = authors[i]
+      author.innerHTML = arr[j]["author"];
       s2.appendChild(author);
 
       newline = document.createElement("br");
@@ -906,7 +889,7 @@ function buildPapers() {
 
       let conference = document.createElement("span");
       conference.className = "paper-conference";
-      conference.innerHTML = conferences[i] + ", " + years[i];
+      conference.innerHTML = arr[j]["conference"] + ", " + arr[j]["year"];
       s2.appendChild(conference);
     }
 
