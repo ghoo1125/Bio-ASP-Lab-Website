@@ -889,6 +889,7 @@ function buildPapers() {
 
       let fileName = document.createElement("a");
       fileName.href = files[i];
+      fileName.target = "_blank";
       fileName.innerHTML = names[i]
       paperTitle.appendChild(fileName);
 
