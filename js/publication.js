@@ -1,13 +1,9 @@
-// FIXME store the current underline idx
 const underlineIdx = {
   CONFERENCE: 0,
   JOURNAL: 1,
 }
+// FIXME store the current underline idx as global variable
 let current = underlineIdx.CONFERENCE;
-
-// papers between FIRST_YEAR and CURRENT_YEAR will be shown
-const FIRST_YEAR = 2005;
-const CURRENT_YEAR = 2018;
 
 const confAbbr = {
   APSIPA: "Asia-Pacific Signal and Information Processing Association (APSIPA)",
@@ -1092,22 +1088,21 @@ function addUnderlineListener() {
   }
 }
 
-// return array of year elements, which idx from FIRST_YEAR to CURRENT_YEAR
-function buildYear(container) {
-  let years = [];
-  for (let i = CURRENT_YEAR; i >= FIRST_YEAR; i--) {
+function buildYear(container, years) {
+  let yearTitles = [];
+  for (let i = 0; i < years.length; i++) {
     let yearTitle = document.createElement("div");
     yearTitle.className = "row year-title";
-    yearTitle.innerHTML = i.toString();
+    yearTitle.innerHTML = years[i].toString();
     container.appendChild(yearTitle);
 
     let hr = document.createElement("hr");
     yearTitle.appendChild(hr);
 
-    years[i - FIRST_YEAR] = yearTitle;
+    yearTitles[years[i] - years[years.length - 1]] = yearTitle;
   }
 
-  return years;
+  return yearTitles;
 }
 
 function buildPapers() {
@@ -1127,19 +1122,20 @@ function buildPapers() {
         return;
     }
 
-    // build year titles from FIRST_YEAR to CURRENT_YEAR
-    let yearTitles = buildYear(container);
+    // build year titles, extract unique years from arr and sort it in decreasing order
+    let years = [];
+    for (let j in arr) {
+      years.push(arr[j]["year"]);
+    }
+    years = years.filter((e, i, a) => a.indexOf(e) === i);
+    years = years.sort((a, b) => b - a);
+    let yearTitles = buildYear(container, years);
 
     // build papers block
     for (let j in arr) {
-      if (arr[j]["year"] < FIRST_YEAR) {
-        // the paper is too old...
-        continue;
-      }
-
       let paper = document.createElement("div");
       paper.className = "row paper";
-      yearTitles[arr[j]["year"] - FIRST_YEAR].appendChild(paper);
+      yearTitles[arr[j]["year"] - years[years.length - 1]].appendChild(paper);
 
       let s1 = document.createElement("div");
       s1.className = "col s1";
