@@ -2,7 +2,6 @@
 const underlineIdx = {
   CONFERENCE: 0,
   JOURNAL: 1,
-  BOOK: 2,
 }
 let current = underlineIdx.CONFERENCE;
 
@@ -1124,11 +1123,6 @@ function buildPapers() {
         container = document.getElementById("journal");
         arr = journals;
         break;
-      case underlineIdx.BOOK:
-        return;
-        container = document.getElementById("book");
-        arr = books;
-        break;
       default:
         return;
     }
@@ -1196,6 +1190,6 @@ function buildPapers() {
   // add listener for clicking on difference categories
   addUnderlineListener();
 
-  // build conference, journal, book block with visibility defautl to none
+  // build conference, journal block with visibility defautl to none
   buildPapers();
 }) ();
