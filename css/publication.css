@@ -18,7 +18,7 @@ hr {
 }
 
 .category {
-  width: 33%;
+  width: 25%;
   float: left;
   text-align: center;
   line-height: 48px;
@@ -26,7 +26,7 @@ hr {
 }
 
 .underline {
-  width: 60%;
+  width: 80%;
   height: 2px;
   visibility: hidden;
 }
