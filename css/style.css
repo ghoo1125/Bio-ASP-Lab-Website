@@ -377,6 +377,12 @@ ol.type li a:hover {
 	padding: 5px;
 	color: #E87E04;
 }
+.more {
+  margin-top: 30px;
+  display: block;
+  text-align: right;
+  font-size: 14pt;
+}
 /* Contact Section */
 #contact {
 	padding: 120px 0 60px 0;
