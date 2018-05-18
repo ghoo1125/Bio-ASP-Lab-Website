@@ -210,6 +210,7 @@ header .intro-text {
 }
 .people-name {
   font-size: 14pt;
+  font-weight: bold;
 }
 .people-topic {
   font-style: italic;
