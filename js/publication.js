@@ -338,7 +338,7 @@ let journals = [{
 let papers = [{
     "imgPath": "img/conference/tsao2001segmental.png",
     "filePath": "paper/conference/tsao2001segmental.pdf",
-    "year": 2005,
+    "year": 2001,
     "name": "Segmental Eigenvoice for Rapid Speaker Adaptation.",
     "author": "Y. Tsao, S.-M. Lee, and L.-S. Lee",
     "conference": "Eurospeech",
@@ -1148,6 +1148,9 @@ function buildPapers() {
       imgPath.className = "paper-img";
       imgPath.src = arr[j]["imgPath"];
       s1.appendChild(imgPath);
+      imgPath.onerror = function() {
+        imgPath.src = "img/coming_soon.jpg";
+      }
 
       let s2 = document.createElement("div");
       s2.className = "col s2";
