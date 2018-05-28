@@ -1095,6 +1095,9 @@ function buildYear(container, years) {
     yearTitle.className = "row year-title";
     yearTitle.innerHTML = years[i].toString();
     container.appendChild(yearTitle);
+    if (i % 2 == 0) {
+      yearTitle.style.background = "#f6f6f6";
+    }
 
     let hr = document.createElement("hr");
     yearTitle.appendChild(hr);
