@@ -749,19 +749,12 @@ let papers = [{
     "author": "P. Lin, D.-C. Lyu, Y.-F. Chang, and Y. Tsao",
     "conference": confAbbr.GLOBALSIP,
   }, {
-    "imgPath": "img/conference/lai2016improving.png",
-    "filePath": "paper/conference/lai2016improving.pdf",
+    "imgPath": "img/conference/lai2016improving_02.png",
+    "filePath": "paper/conference/lai2016improving_02.pdf",
     "year": 2016,
     "name": "Improving the Performance of Noise Reduction in Hearing Aids Based on the Genetic Algorithm.",
     "author": "Ying-Hui Lai, Chien-Hsun Chen, Shih-Tsang Tang, Zong-Mu Yeh, and Yu Tsao",
     "conference": "IFMBE Proceedings 57",
-  }, {
-    "imgPath": "img/conference/liu2016nonnegative.png",
-    "filePath": "paper/conference/liu2016nonnegative.pdf",
-    "year": 2016,
-    "name": "Nonnegative Matrix Factorization-based Frequency Lowering Technology for Mandarin-speaking Hearing Aid Users.",
-    "author": "Yen-Teh Liu, Yu Tsao, Ronald Y. Chang",
-    "conference": confAbbr.ICASSP,
   }, {
     "imgPath": "img/conference/wang2016temporal.png",
     "filePath": "paper/conference/wang2016temporal.pdf",
@@ -847,8 +840,8 @@ let papers = [{
     "author": "Y.-Y. Hsieh, C.-D. Wu, Y. Tsao, and S.-S. Lu",
     "conference": confAbbr.BIOCAS,
   }, {
-    "imgPath": "img/conference/lai2016improving.png",
-    "filePath": "paper/conference/lai2016improving.pdf",
+    "imgPath": "img/conference/lai2016improving_01.png",
+    "filePath": "paper/conference/lai2016improving_01.pdf",
     "year": 2016,
     "name": "Improving the Performance of Speech Perception in Noisy Environment based on a FAME Strategy.",
     "author": "Y.-H. Lai, S.-S. Wang, Y.-T. Su, H.-C. Cheng, F. K. Fu, and Y. Tsao",
