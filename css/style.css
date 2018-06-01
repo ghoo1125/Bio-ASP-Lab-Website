@@ -217,6 +217,13 @@ header .intro-text {
   text-align: center;
   float: left;
 }
+.people-img {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.25s ease;
+}
+.people-img:hover {
+  transform: scale(1.05);
+}
 .people-name {
   font-size: 14pt;
   font-weight: bold;
@@ -226,10 +233,10 @@ header .intro-text {
   color: #1a237e;
 }
 .slideshow {
-  padding: 0;
+  padding: 5px;
   margin: 0;
   overflow: auto;
-  min-height: 345px;
+  min-height: 350px;
 }
 .people-slide, .alumni-slide {
   animation: animateleft 1s;
