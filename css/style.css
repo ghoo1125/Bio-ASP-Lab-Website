@@ -100,7 +100,7 @@ hr {
 	color: #555;
 }
 .navbar-custom .nav li a {
-	margin: 0 60px;
+	margin: 0 25px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	-webkit-transition: background .3s ease-in-out;
@@ -177,7 +177,8 @@ header .intro-text {
 }
 /* About Section */
 #about {
-	padding: 120px 0;
+	padding: 100px 0;
+	background: #f6f6f6;
 }
 #about .section-title {
   padding: 0;
@@ -270,8 +271,7 @@ header .intro-text {
 }
 /* News Section */
 #news {
-	padding: 120px 0;
-	background: #f6f6f6;
+	padding: 100px 0;
 }
 .news-board {
   border-top: 1px solid #ddd;
@@ -308,9 +308,54 @@ header .intro-text {
 .col.s4 {
   width: 70%;
 }
+/* Research Section */
+#research {
+	padding: 100px 0;
+}
+.research {
+  padding-bottom: 80px;
+}
+.research-img {
+  max-height: 250px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin-top: 10%;
+  border: 1px solid darkgrey;
+}
+.research-hr {
+  display: block;
+  float: left;
+  width: 200px;
+  margin: 0;
+  border-top: 3px solid #e7e7e7;
+}
+.research-title {
+  display: block;
+  font-size: 22pt;
+  margin: 20px 0;
+  font-weight: 400;
+  color: #555;
+}
+.research-desc {
+  font-size: 12pt;
+  line-height: 1.5;
+}
+.align-left {
+  margin-left: 10%;
+}
+.padding-right {
+  padding-right: 2vh;
+}
+.col.s5 {
+  width: 30%;
+}
+.col.s6 {
+  width: 55%;
+}
 /* Publications Section */
 #publication {
-	padding: 120px 0;
+	padding: 100px 0;
 	background: #f6f6f6;
 }
 .categories {
@@ -444,7 +489,7 @@ ol.type li a:hover {
 }
 /* Contact Section */
 #contact {
-	padding: 120px 0 60px 0;
+	padding: 100px 0;
 }
 #contact .section-title {
   padding: 0;
