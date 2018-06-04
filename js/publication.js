@@ -997,11 +997,11 @@ let papers = [{
 ];
 
 function showPaper() {
-  let containers = document.getElementsByClassName("container");
-  for (let i = 0; i < containers.length; i++) {
-    containers[i].style.display = "none";
+  let shows = document.getElementsByClassName("show");
+  for (let i = 0; i < shows.length; i++) {
+    shows[i].style.display = "none";
   }
-  containers[current].style.display = "block";
+  shows[current].style.display = "block";
 }
 
 function addUnderlineListener() {

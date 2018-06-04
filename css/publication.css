@@ -39,10 +39,6 @@ hr {
 }
 
 /* paper */
-.hide {
-  display: none;
-}
-
 .paper {
   line-height: 2;
   font-size: 14pt;
