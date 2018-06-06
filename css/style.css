@@ -236,20 +236,7 @@ header .intro-text {
 .slideshow {
   padding: 5px;
   margin: 0;
-  overflow: auto;
   min-height: 350px;
-}
-@media screen and (max-width: 700px) {
-  .people-col {
-    font-size: 1.5vw;
-  }
-  #about img {
-    width: 15vw;
-    height: 15vw;
-  }
-  .slideshow {
-    min-height: 150px;
-  }
 }
 .people-slide, .alumni-slide {
   animation: animateleft 1s;
@@ -261,6 +248,30 @@ header .intro-text {
   text-align: center;
   width: 5%;
   float: left;
+}
+@media screen and (max-width: 700px) {
+  /* FIXME seems there's a bug on chrome ios float, hard fixed here */
+  .people-slide, .alumni-slide {
+    margin-left: 7vw;
+    width: 80%;
+  }
+  .slide-btn {
+    width: 3%;
+  }
+  /* FIXME seems there's a bug on chrome ios box-shadow, hard fixed here */
+  .people-img {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  .people-col {
+    font-size: 1.5vw;
+  }
+  #about img {
+    width: 15vw;
+    height: 15vw;
+  }
+  .slideshow {
+    min-height: 130px;
+  }
 }
 @keyframes animateleft {
   from {
