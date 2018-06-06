@@ -200,8 +200,8 @@ header .intro-text {
 }
 #about img {
 	border-radius: 50%;
-	width: 160px;
-	height: 160px;
+	width: 10vw;
+	height: 10vw;
 	display: inline-block;
   margin: 0 0 15px 0;
 }
