@@ -1053,7 +1053,7 @@ function addUnderlineListener() {
       });
 
       // fade in new underline
-      node= underlines[i].cloneNode(true);
+      node = underlines[i].cloneNode(true);
       underlines[i].parentNode.replaceChild(node, underlines[i]);
 
       pos = current < i ? distance * -1 : distance;
