@@ -1023,7 +1023,8 @@ function addUnderlineListener() {
       if (i == current) {
         return;
       }
-
+      // FIXME animation not working on Chrome ios.
+/*
       let pos;
       let str;
       let node;
@@ -1072,7 +1073,7 @@ function addUnderlineListener() {
       ], {
         duration: 500,
       });
-
+*/
       underlines[i].style.visibility = "visible";
       underlines[current].style.visibility = "hidden";
 
