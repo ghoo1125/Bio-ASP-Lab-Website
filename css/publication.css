@@ -22,7 +22,7 @@ hr {
   float: left;
   text-align: center;
   line-height: 48px;
-  font-size: 24px;
+  font-size: 2.5vw;
 }
 
 .underline {
@@ -33,7 +33,7 @@ hr {
 
 .year-title {
   line-height: 1.2;
-  font-size: 20pt;
+  font-size: 2vw;
   text-align: center;
   padding: 20px 0;
 }
@@ -41,7 +41,7 @@ hr {
 /* paper */
 .paper {
   line-height: 2;
-  font-size: 14pt;
+  font-size: 1.5vw;
   overflow: auto;
   text-align: left;
   margin: 15px 0;
@@ -58,7 +58,7 @@ hr {
 .paper-img {
   float: right;
   max-height: 100%;
-  max-width: 150px;
+  max-width: 30%;
   height: auto;
   width: auto;
   margin-right: 10%;
@@ -84,7 +84,7 @@ hr {
   bottom: 50px;
   width: 40px;
   height: 40px;
-  font-size: 20pt;
+  font-size: 2vw;
   text-align: center;
   cursor: pointer;
   border: 1px solid #ddd;
