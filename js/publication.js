@@ -30,6 +30,7 @@ const confAbbr = {
   PNC: "Pacific Neighborhood Consortium (PNC) Annual Conference and Joint Meetings",
 }
 
+// array of journals, add paper of journal here!
 let journals = [{
     "imgPath": "img/journal/tsao2005segmental.png",
     "filePath": "paper/journal/tsao2005segmental.pdf",
