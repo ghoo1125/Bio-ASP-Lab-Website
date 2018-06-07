@@ -1006,11 +1006,9 @@ function showPaper() {
 }
 
 function addUnderlineListener() {
-  let underlines = document.getElementsByClassName("underline");
   let categories = document.getElementsByClassName("category");
-
-  // init to conference category
-  underlines[current].style.visibility = "visible";
+  let underline = document.getElementById("underline");
+  underline.style.left = '0px';
 
   // there is only one category
   if (categories.length < 2) {
@@ -1023,59 +1021,26 @@ function addUnderlineListener() {
       if (i == current) {
         return;
       }
-      // FIXME animation not working on Chrome ios.
-/*
-      let pos;
-      let str;
-      let node;
-      let distance = Math.abs(underlines[i].getBoundingClientRect().right -
-                              underlines[current].getBoundingClientRect().right);
-      distance /= 2;
 
-      // fade out old underline
-      node = underlines[current].cloneNode(true);
-      underlines[current].parentNode.replaceChild(node, underlines[current]);
+      let curPos = parseInt(underline.style.left);
+      let prev = current;
+      let pos = 0;
+      let distance = Math.abs(categories[i].getBoundingClientRect().right -
+                              categories[current].getBoundingClientRect().right);
+      let time = 0.5; // animation finish in 1 second
+      let interval = 10; // interval in millisecond
 
-      pos = current < i ? distance : distance * -1;
-      str = "translateX(" + pos + "px)";
-      node.animate([
-        {  // from
-          transform: 'translateX(0px)',
-          opacity: 1,
-          visibility: "visible",
-        },
-        {  // to
-          transform: str,
-          opacity: 0,
-          visibility: "hidden",
+      let underlineAnimation = setInterval(function() {
+        if (pos > distance) {
+          prev < i ? underline.style.left = curPos + distance + 'px'
+                      : underline.style.left = curPos - distance + 'px';
+          clearInterval(underlineAnimation);
+        } else {
+          pos += distance / (time / interval * 1000);
+          prev < i ? underline.style.left = curPos + pos + 'px'
+                   : underline.style.left = curPos - pos + 'px';
         }
-      ], {
-        duration: 500,
-      });
-
-      // fade in new underline
-      node = underlines[i].cloneNode(true);
-      underlines[i].parentNode.replaceChild(node, underlines[i]);
-
-      pos = current < i ? distance * -1 : distance;
-      str = "translateX(" + pos + "px)";
-      node.animate([
-        {  // from
-          transform: str,
-          opacity: 0,
-          visibility: "hidden",
-        },
-        {  // to
-          transform: 'translateX(0px)',
-          opacity: 1,
-          visibility: "visible",
-        }
-      ], {
-        duration: 500,
-      });
-*/
-      underlines[i].style.visibility = "visible";
-      underlines[current].style.visibility = "hidden";
+      }, interval);
 
       current = i;
       showPaper();
