@@ -165,11 +165,13 @@ hr {
 	letter-spacing: 2px;
 	margin-bottom: 20px;
 	color: #333;
+  text-shadow: 2px 2px 2px #ddd;
 }
 .intro p {
 	font-size: 20px;
 	margin-bottom: 40px;
 	margin-top: 20px;
+  text-shadow: 1px 1px 1px #ddd;
 }
 header .intro-text {
 	padding-top: 200px;
