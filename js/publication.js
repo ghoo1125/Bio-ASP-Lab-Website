@@ -329,7 +329,7 @@ let journals = [{
     "imgPath": "img/journal/lin2018comparison.png",
     "filePath": "paper/journal/lin2018comparison.pdf",
     "year": 2018,
-    "name": "Comparison of passive acoustic soniferous fish monitoring with supervised and unsupervised approaches.",
+    "name": "Comparison of Passive Acoustic Soniferous Fish Monitoring With Supervised and Unsupervised Approaches.",
     "author": "T.-H. Lin, T. Akamatsu, and Y, Tsao",
     "conference": confAbbr.JASA,
   }
