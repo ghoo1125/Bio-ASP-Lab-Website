@@ -34,6 +34,7 @@ paper:
   'name': 'Name of the paper',
   'author': 'Authors' name',
   'conference': 'Conference's name',
+  'demo': ['description1', 'audio/src/1', 'description2', 'audio/src/2',...]
 }
 </pre>
 
@@ -50,6 +51,7 @@ journal:
   'name': 'Name of the journal',
   'author': 'Authors' name',
   'conference': 'Conference's name',
+  'demo': ['description1', 'audio/src/1', 'description2', 'audio/src/2',...]
 }
 </pre>
 

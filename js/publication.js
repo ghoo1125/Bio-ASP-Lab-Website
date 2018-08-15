@@ -269,6 +269,7 @@ let journals = [{
     "name": "Off-Line Evaluation of Mobile-Centric Indoor Positioning Systems: The Experiences from the 2017 IPIN Competition.",
     "author": "J. Torres-Sospedra et al.",
     "conference": "Sensors",
+    "demo": ['journal test', 'audio/test.wav']
   }, {
     "imgPath": "img/journal/lai2018deep.png",
     "filePath": "paper/journal/lai2018deep.pdf",
@@ -938,6 +939,7 @@ let papers = [{
     "name": "Speech Dereverberation Based on Integrated Deep and Ensemble Learning Algorithm.",
     "author": "W.-J. Lee, S.-S. Wang, F. Chen, X. Lu, S.-Y. Chien, and Y. Tsao",
     "conference": confAbbr.ICASSP,
+    "demo": ["Test Audio 1", "audio/test.wav", "Test Audio 2", "audio/test2.wav"],
   }, {
     "imgPath": "img/conference/sun2018novel.png",
     "filePath": "paper/conference/sun2018novel.pdf",
@@ -945,6 +947,7 @@ let papers = [{
     "name": "A Novel LSTM-based Speech Preprocessor For Speaker Diarization in Realistic Mismatch Conditions.",
     "author": "L. Sun, J. Du, T. Gao, Y.-D. Lu, Y. Tsao, C.-H. Lee, N. Ryant",
     "conference": confAbbr.ICASSP,
+    "demo": ["Source", "audio/test3.wav"],
   }, {
     "imgPath": "img/conference/ryant2017enhancement.png",
     "filePath": "paper/conference/ryant2017enhancement.pdf",
@@ -1068,6 +1071,7 @@ function buildYear(container, years) {
   return yearTitles;
 }
 
+let popups = new Map();
 function buildPapers() {
   for (let i = 0; i < Object.keys(underlineIdx).length; i++) {
     let container;
@@ -1141,6 +1145,46 @@ function buildPapers() {
       conference.className = "paper-conference";
       conference.innerHTML = arr[j]["conference"] + ", " + arr[j]["year"];
       s2.appendChild(conference);
+
+      newline = document.createElement("br");
+      conference.appendChild(newline);
+
+      if ("demo" in arr[j]) {
+        let demo = document.createElement("a");
+        demo.className = "paper-demo";
+        demo.innerHTML = "Demo";
+        s2.appendChild(demo);
+
+        let popup = document.createElement("div");
+        popup.className = "paper-popup";
+        s2.appendChild(popup);
+        demo.addEventListener("click", function() {
+          popup.style.display = "block";
+        });
+        popups.set(popup, popup);
+
+        let content = document.createElement("div");
+        content.className = "popup-content";
+        popup.appendChild(content)
+
+        demoarr = arr[j]["demo"];
+        for (let i = 0; i < demoarr.length; i += 2) {
+          let description = document.createElement("p");
+          description.innerHTML = demoarr[i];
+          content.appendChild(description);
+
+          let audio = document.createElement("audio");
+          audio.controls = "controls";
+          audio.src = demoarr[i+1];
+          content.appendChild(audio);
+        }
+      }
+    }
+
+    window.onclick = function(event) {
+      if (popups.has(event.target)) {
+        popups.get(event.target).style.display = "none";
+      }
     }
 
     // show papers of init category, conference
